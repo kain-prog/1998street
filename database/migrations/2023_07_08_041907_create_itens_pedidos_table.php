@@ -16,8 +16,8 @@ return new class extends Migration
             $table->integer('quantidade');
             $table->decimal('valor', 10, 2);
             $table->dateTime('td_item');
-            $table->integer('produto_id')->unsigned();
-            $table->integer('pedido_id')->unsigned();
+            $table->unsignedBigInteger('produto_id');
+            $table->unsignedBigInteger('pedido_id');
             $table->timestamps();
 
             $table->foreign('produto_id')

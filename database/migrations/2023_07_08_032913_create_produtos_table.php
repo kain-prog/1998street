@@ -15,20 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('nome', 100);
             $table->decimal('valor', 10, 2);
-            $table->strinmg('foto', 100);
+            $table->string('foto', 100);
             $table->string('descricao', 255)->nullable();
+            $table->unsignedBigInteger('categoria_id');
+            $table->unsignedBigInteger('estoque_id');
             $table->timestamps();
-            $table->integer('categoria_id')->unsigned();
-            $table->integer('estoque_id')->unsigned();
 
             $table->foreign('categoria_id')
                     ->references('id')->on('categorias')
                     ->onDelete('cascade');
-            
-            $table->foreign('estoque_id')
-                    ->references('id')->on('estoques')
-                    ->onDelete('cascade');
-            
+                        
         });
     }
 

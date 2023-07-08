@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tamanho');
             $table->integer('quantidade');
             $table->string('cor');
-            $table->integer('produto_id')->unsigned();
+            $table->unsignedBigInteger('produto_id');
             $table->timestamps();
 
             $table->foreign('produto_id')

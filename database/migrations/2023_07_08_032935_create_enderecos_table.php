@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('cep');
             $table->string('complemento')->nullable();
             $table->string('estado');
-            $table->integer('usuario_id')->unsigned();
+            $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
 
             $table->foreign('usuario_id')
