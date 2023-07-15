@@ -1,0 +1,18 @@
+#sidebar{
+    display: none;
+}
+
+#name-acoount::after{
+    content: '';
+}
+
+@media(max-width: 991px){
+
+    #info-login{
+        display: none!important;
+    }
+
+    #sidebar{
+        display: flex;
+    }
+}
